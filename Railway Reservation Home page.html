@@ -1,0 +1,151 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	
+	
+	<form method="post">
+	
+
+ &nbsp;<img alt="ONLINE RESERVATION PORTAL" height="80" src="cooltext.gif" width="1350"></form>
+
+
+&nbsp;<form method="post">
+	
+
+ <input type="button" value="Go To HOME" onclick="window.location.href='homepage afterlogin.html'" />&nbsp;
+	<input type="button" value="Logout" onclick="window.location.href='homepage.html'" /></form>
+<title>Book Your Ticket</title>
+<style type="text/css">
+
+
+body {
+        background-image: url("ok.png");
+} 
+div {width: 800;
+     border: 20px solid silver;
+     padding: 50px;
+     margin-left: 200px;
+     margin-right:200px;
+     color:black;
+     background-image:url('background2.jpg')
+}
+
+</style>
+
+	
+	
+	<script>
+	function check(form) { 
+                                if(form.From.value == "" || form.To.value == "" || form.date.value=="") {
+                    alert("please enter details")/*displays error message*/
+                }
+                else {
+                window.open('Railway Reservation page 1.html')
+                    
+                }
+            }
+
+function myFunc() {
+    var txt;
+    if (confirm("Are you sure to submit?")) {
+        txt = "Form successfully submitted";
+    } else {
+        txt = "Registration cancelled";
+    }
+    document.getElementById("verify").innerHTML = txt;
+}
+function validateForm() {
+    var x = document.forms["regform"]["From"].value;
+     var y = document.forms["regform"]["To"].value;
+     var z = document.forms["regform"]["Journey_Day"].value;
+     var p = document.forms["regform"]["Journey_Month"].value;
+     var q = document.forms["regform"]["Journey_Year"].value;
+
+
+    if (x == "") {
+        alert("Please Fill out the Source Station");
+        return false;
+    }
+    else if (y == "") {
+        alert("Please fill out the Destination Station");
+        return false;
+    }
+
+   else if (z == "") {
+        alert("Journey Day must be filled out");
+        return false;
+    }
+     else if (p == "") {
+        alert("Journey Month must be filled out");
+        return false;
+    }
+ else if (q == "") {
+        alert("Journey Year must be filled out");
+        return false;
+       }
+
+
+
+}
+
+   
+
+
+</script>
+	</head>
+	<body>
+	
+	<form name="regform" onsubmit="return validateForm()">
+	<div>
+	<table align="center" cellpadding = "10">
+	
+ <h1><center><i>---- Book Train Tickets ----</i></center></h1>	
+ <!----- From* ---------------------------------------------------------->
+	<tr>
+	<td>From Station</td>
+	<td><input type="text"  maxlength="30" name="From" required > 
+	</td>
+	</tr>
+	
+	<!----- To* ---------------------------------------------------------->
+	<tr>
+	<td>To Station</td>
+	<td><input type="text"  maxlength="30" name="To" required/>
+	</td>
+	</tr>
+	
+	<!----- Date Of Journey* -------------------------------------------------------->
+	<tr>
+	<td>Date Of Journey</td>
+	
+	<td>
+	<input type="date" name="date">
+		</td>
+	</tr>
+	<tr><td>
+    <input type="checkbox" value="on" checked/>Show Both AC And Non AC Coaches<br /> 
+    </td></tr>
+
+	<!----- Submit and Reset ------------------------------------------------->
+	<tr>
+	<td colspan="2" align="center">
+	 <a href="Railway Reservation page1.html">
+	<input type="reset" value="Reset"></a>
+	
+	
+	<form method="post">
+	
+
+ <input type="button" value="Submit" onclick="check(this.form)">
+ 
+<p id="verify"></p>
+&nbsp;&nbsp;&nbsp;&nbsp;
+	</td>
+	</tr>
+	</table>
+	</div>
+	</form>
+	
+	</body>
+	</html>
+	

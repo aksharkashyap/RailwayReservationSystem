@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<center>
+<title> Ticket Cancellation </title>
+<Style>
+
+
+
+body {
+        background-image: url("ok.png");
+} 
+.border {width: 300;
+     border: 10px solid silver;
+	 
+     padding: 30px;
+     margin-left: 190px;
+     margin-right:190px;
+	 height:200px;
+	
+     color:black;
+     background-image:url('dark2.jpg')
+}
+
+
+
+.auto-style1 {
+	color: black;
+}
+
+
+
+</style>
+<body>
+<form>
+<input type="button"  value="Home" onclick="window.location.href='homepage afterlogin.html'" />
+          			<input type="button"  value="Logout" onclick="window.location.href='homepage.html'" />
+        			<input type="button"  value="About us" onclick="window.location.href='about us.html'" />
+     			<input type="button"  value="Give Us Feedback" onclick="window.location.href='feedback.html'" />
+	<br><br><br>
+     			
+ </form>
+<b>
+<u>Online  ticket cancellation<br><br></u></b><br>
+<div class ="border">
+<table width ="50%">
+<tr>
+
+<td><span style="FONT-WEIGHT:bold">PNR Number</span></td>
+<td><input id="systktcanFormId:pnrid" type="text" name="systktcanFormId:pnrid" maxlength="10" style="width:90%:min-width:100px;color: #333333; font: 11px arial;" tableindex="1"/></td>
+</tr>
+<tr>
+<td><span style="FONT-WEIGHT:bold">TRAIN Number</span></td>
+<td><input id ="systktcanFormId:trainid" type="text" name="systktcanFormId:trainid" maxlength="10" style="width:90%:min-width:100px;color: #333333; font:11px arial;" tableindex="1"/></td>
+</tr>
+<tr>
+<td><span style="FONT-WEIGHT:bold">Captcha</span></td>
+<td><input id ="systktcanFormId:captchaid" type="text" name="systktcanFormId:captchaid" maxlength="10" style="width:90%:min-width:100px;color: #333333;font:11px arial;" tableindex="1"/></td>
+</tr>
+<br>
+<tr>
+<td><img src="captchaImage" id="cimage" style="border:none;height: 0px" />
+</td>
+
+<td><a href="#" id="refresh"><img src="captcha.jpeg" style="border:none; height: 50px;width: 50px;" /></a>
+</td>
+<table>
+<tr>
+<td nowrap="nowrap"><input type="checkbox" id="rulesid" /></td>
+<td><span style="FONT-WEIGHT: bold">I have read cancellation/boarding point change procedure and its rule.</span></td>
+</tr>
+</table>
+<br/>
+
+<table>
+<tr>
+<td><input id="systktcanFormId:caninputid" type="submit" name="systktcanFormId:caninputid" value="Submit"  onclick="alert('Submitted successfully');"" /></td>
+<td><input type="submit" name="systktcanFormId:j_idt46" value="Reset"  /></td>
+</tr>
+</table>
+	<br><br><br><br><br>
+	<br><br><br>
+</center></br></br
+
+<em><marquee class="auto-style1">ONLINE RESERVATION SERVICES</marquee></em>
+<em><marquee class="auto-style1">AFTER CANCELLING THE TICKET- REFUND PROCESS WILL BE INITIATED</marquee></em>
+
+</body>
+
+</head>
+<html>
+

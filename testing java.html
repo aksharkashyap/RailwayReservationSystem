@@ -1,0 +1,76 @@
+﻿<!DOCTYPE>
+<html>
+
+<head>
+
+<script type=" text/javascript">
+
+
+function validateNum(thisform)
+{
+var num = thisform.num.value;
+if(num==null || num=="")
+{
+alert("Enter the number");
+thisform.num.focus();
+return false;
+
+}
+if(isNaN(num))
+{
+alert("it is not a valid number");
+thisform.num.focus();
+return false;
+}
+return true;
+}
+
+function validatePhNum(thisform){
+var ph=thisform.phnum.value;
+if(ph==null||ph=="")
+{
+alert("enter the phone number");
+thisform.phnum.focus();
+return false;
+}
+if(ph.length<10)
+{
+alert("phone number must have atleast 10 digits");
+thisform.phnum.focus();
+return false;
+
+}
+if(isNaN(ph))
+{
+alert("Invalid phone number");
+thisform.phnum.focus();
+return false;
+
+}
+return true;
+}
+
+function akshar(thisform)
+{
+  validateNum(thisform);
+ 
+  validatePhNum(thisform);
+ 
+
+}
+
+
+</script>
+</head>
+
+<body>
+<form action="homepage.html" onsubmit=" return akshar(this)" method="post">
+Enter number:<input type="text" name="num"/><br/>
+Phone number:<input type="text" name="phnum"/><br/>
+<input type="submit" value="submit"/>
+
+
+</form>
+</body>
+
+</html>

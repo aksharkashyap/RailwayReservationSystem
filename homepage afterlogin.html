@@ -1,0 +1,165 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>WELCOME TO RAILWAY RESERVATION SYSTEM</title>
+
+<img src="cooltext5.png" width="1351" height="108" alt="ONLINE RESERVATION PORTAL" />
+
+
+<style>
+body {
+        background-image: url("ok.png");
+} 
+
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  width: 200px;
+  margin:5px;   
+  margin-left: 40px;
+  padding: 20px;
+  
+  color: white;						 /*text color*/
+  text-align: center;
+  font-size: 28px;
+  cursor: pointer;
+
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block; 		/*display: inline-block allows to set a width and height on the element.*/
+  position: relative;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button span:after {
+  content: '\00BB';   						/*css Entity code*/
+  opacity: 0;							/*transparency level*/
+  position: absolute;
+  top: 0;
+  right: -20px;	  
+  transition: 0.5s;
+}
+
+.button2 {
+  border-radius: 4px;
+  background-color:#0F9490;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 20px;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.Upper_corner_buttons input{ 
+margin-right:16px;
+}
+
+
+</style>
+
+<script>
+
+
+function welcome()
+{
+alert("Welcome To Homepage");
+}
+
+function logout()
+{
+	var txt;
+	var r = confirm("Are You Sure to logout!");
+	if (r == true) 
+	{
+    alert("Successfully Logged Out");  
+	window.location="homepage.html";
+	} 
+	else 
+	{
+    alert("Cancelled !");
+	}
+}
+
+function feedback()
+{
+alert("Thank You For Giving Us Your Precious Time ! ");  
+window.location="feedback.html";
+
+
+}
+
+
+</script>
+</head>
+<body>
+<div class="Upper_corner_buttons ">
+<form method="post">
+	
+    <input type="button" value="HOME" onclick= " return welcome()" />
+	<input type="button"  value="Logout" onclick="return logout()" />
+	<input type="button"  value="Password Change" onclick="window.location.href='password_reset.html'" />
+	<input type="button"  value="Give Us Feedback" onclick="return feedback()" />
+	<input type="button"  value="About US" onclick="window.location.href='about us.html'" />
+	</form>
+</div>
+
+<h2>SERVICES</h2>
+
+<button class="button" value="Book Your Tickets" onclick="window.location.href='Railway Reservation Home Page.html'"/><span>Book Your Tickets</span></button>
+<button class="button"><span>Print Your Tickets </span></button>
+<button class="button"><span>Booked Ticket History </span></button>
+<button class="button" value="Cancell Booked Tickets" onclick="window.location.href='ticketcancel.html'"/><span>Cancel Booked Tickets</span></button>
+<button class="button" value="Live Train Status" onclick="window.location.href='live train.html'"/><span>Live Train Status</span></button>
+
+<button class="button"><span>Save Passanger List </span></button>
+<button class="button" value="Profile Update" onclick="window.location.href='profile update.html'"/><span>Profile Update</span></button>
+<button class="button2" value="Logout" onclick="logout()"/><span>Logout</span></button>
+
+<br><br><br><br><br><br>
+<marquee style= "color:white"><em>WELCOME TO ONLINE RAILWAY RESERVATION SYSTEM</em></marquee>
+</body>
+</html>

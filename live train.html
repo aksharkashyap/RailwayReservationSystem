@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<img src="cooltext2.gif" width="1351" height="108" alt="ONLINE RESERVATION PORTAL" />
+<center><img alt="ONLINE RESERVATION PORTAL" height="40" src="live train.png" width="600"></center>
+
+<form method="post">
+<input type="button" value="Go To HOME" onclick="window.location.href='homepage afterlogin.html'" />
+</form>
+
+<form method="post">
+	&nbsp;
+</form>
+<title>Live Train Status</title>
+<style type="text/css">
+
+
+body {
+        background-image: url("ok.png");
+} 
+div {width: 200;
+     border: 20px solid silver;
+     padding: 10px;
+     margin-left: 260px;
+     margin-right:250px;
+     color:black;
+     background-image:url('images2.jpg')
+}
+
+</style>
+
+<script type="text/javascript">
+function myFunc()
+ {
+    var txt;
+    if (confirm("Are you sure you want to reset?")) 
+{
+        alert("Form successfully resetted");
+    } 
+
+}
+function validateForm()
+ {
+    
+    var y = document.forms["regform"]["train_name"].value;
+    var z = document.forms["regform"]["date"].value;
+ 
+   
+
+    
+     if (y=="") {
+        alert("Train Name/Number Must be filled out ");
+        return false;
+    }
+
+   else if (z=="") {
+        alert("choose date");
+        return false;   
+
+}
+}
+
+   
+
+
+</script>
+	</head>
+	<body>
+	
+	<form name="regform" onsubmit="return validateForm()" method="post">
+	<div>
+	<table align="center" cellpadding = "10">
+	
+					
+	<!----- train name ---------------------------------------------------------->
+	<tr>
+	<td>Enter Train Number/Name</td>
+	<td><input type="text" name="train_name" maxlength="100" /></td>
+	</tr>
+	<!----- enter date ---------------------------------------------------------->
+	<tr>
+	<td>Enter Date(dd/mm/yy)</td>
+	<td><input type="text" name="date" maxlength="100" /></td>
+	</tr>
+	
+
+
+		<!----- Submit and Reset ------------------------------------------------->
+	<tr>
+	<td colspan="2" align="center">
+	  
+	<input type="reset" value="Reset" onclick="myFunc()">
+        
+	<input type="submit" onclick="validateForm()">
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+	</td>
+	</tr>
+	</table>
+	</div>
+	</form>
+	
+	</body>
+	</html>
+	
