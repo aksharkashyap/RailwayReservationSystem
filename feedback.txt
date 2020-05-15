@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+
+<img src="cooltext2.gif" width="1351" height="108" alt="ONLINE RESERVATION PORTAL" />
+<center><img alt="ONLINE RESERVATION PORTAL" height="40" src="PASSWORD.png" width="600"></center>
+
+<form method="post">
+<input type="button" value="Go To Login Page" onclick="window.location.href='homepage.html'" />
+</form>
+
+<form method="post">
+	&nbsp;
+</form>
+<title>Password Recovery</title>
+
+<style type="text/css">
+
+
+body {
+        background-image: url("ok.png");
+} 
+div {width: 200;
+     border: 20px solid silver;
+     padding: 10px;
+     margin-left: 260px;
+     margin-right:250px;
+     color:white;
+	 
+    	border-top-style:single;
+	border-bottom-style:single;
+	border-top-color:#7cbfcf;
+	border-bottom-color:#7cbfcf;
+	border-top-width:8px;
+	border-bottom-width:8px;
+
+     background-image:url('pass.jpg')
+}
+
+</style>
+
+<HEAD>
+
+	
+	
+	<SCRIPT type="text/javascript">
+	
+function validateUrPw(thisform) 
+
+{
+    var username= thisform.uname.value;
+    var pass1= thisform.pw1.value;
+    var pass2= thisform.pw2.value;
+    var num= thisform.num.value;
+    var answers= thisform.answer.value;
+    var txtEmail= thisform.email.value;
+    var illegalchars=  /[\(\)\<\>\,\;\:\\\/\"\[\]]/;
+    var n1=txtEmail.indexOf("@");
+    var n2=txtEmail.lastIndexOf(".");
+ 
+    
+    
+if (username=="") 
+	{
+        alert("Please Enter the userID");
+        thisform.uname.focus();
+        return false;
+    }
+
+if (username.length<6) 
+	{
+        alert("userID should be of atleast 6 characters");
+        thisform.uname.focus();
+
+        return false;
+    } 
+
+  
+ if (pass1 == "") {
+        alert("Please Choose New Password");
+      thisform.pw1.focus();
+        return false;
+        }
+         
+ if (pass1.length <8) {
+        alert("Password must contain 8 digit");
+      thisform.pw1.focus();
+
+        return false;
+    }
+ if (pass2 == "") {
+        alert("Please Confirm The Password Choosen by You");
+       thisform.pw2.focus();
+
+	    return false;
+        
+    }
+        
+ if (pass2.length <8) {
+        alert(" Confirm Password must contain 8 digit");
+     thisform.pw2.focus();
+
+        return false;
+        
+    }
+ if (pass1.length >=8 && pass2.length >=8) 
+     
+     { if (pass1!= pass2)
+       { alert("password mismatched! enter the correct password");
+        return false;
+       }
+     }
+       if (num==null|| num=="")
+    {
+    alert("Enter Mobile Number");
+    thisform.num.focus();
+    return false;
+    }
+    if (num.length>10)
+    {
+    
+    alert("Mobile Number Should Not Exceed The Limit");
+    thisform.num.focus();
+    return false;
+
+    }
+    if (isNaN(num))
+    {
+    alert("Enter the Correct Mobile Number");
+    thisform.num.focus();
+    return false;
+	}
+     
+if (txtEmail=="")
+{
+alert("Enter the email address");
+thisform.email.focus();
+return false;
+}
+
+if(txtEmail.match(illegalchars))
+{
+alert("Invalid Email address");
+thisform.email.focus();
+return false;
+}
+
+if (n1<1 || n2 - n1<2)
+{
+alert("Invalid Email address");
+thisform.email.focus();
+return false;
+
+}
+
+
+if (answers=="") 
+	{
+        alert("Please Enter the Security Answer");
+        thisform.answer.focus();
+        return false;
+    }
+
+if (answers.length>10) 
+	{
+        alert("Security answer must not contain more than 10 characters");
+        thisform.answer.focus();
+
+        return false;
+    } 
+    
+    return true;
+    
+ }
+ 
+  
+ 
+function myfunction()
+{
+
+alert("Form Has Been Reset");
+
+}
+
+</SCRIPT>
+	</HEAD>
+	<BODY>
+	<div>
+	
+	
+	<Form action="password_recovery after.html" onsubmit="return validateUrPw(this)"
+method="Post">
+	 <table align="center" cellpadding = "10">
+	
+					
+	<!----- Email Id ---------------------------------------------------------->
+	<tr>
+	<td> User ID</td>
+	<td><input type="text" name="uname"/></td>
+	</tr>
+		<tr>
+
+	<td>New Password</td>
+	<td><input type="password" name="pw1"/>(Min Password Length is 8)</td>
+	</tr>
+
+	<tr>
+
+	<td>Confirm Password</td>
+	<td><input type="text" name="pw2"/>(Both Password should match)</td>
+	</tr>
+	
+	<tr>
+
+	<td>Registered Mobile Number</td>
+	<td><input type="text" name="num"/> (10 Digit Number)</td>
+	</tr>
+	<tr>
+	
+	<td>RECOVERY EMAIL
+	<td><input type="text" name="email"/></td>
+	</tr>
+	<tr>
+	<td>SELECT YOUR SECURITY QUESTION</td>
+	<td>
+ <select name="choose_sequrity"> 
+
+	<option>your Favourite Teachers's name</option>
+	<option>your Best friend's name</option>
+	<option>your childhoodname</option>
+	<option>your Birth place</option>
+	<option>your Favourite Food</option>
+	<option>your First bike</option>
+    </select><br>
+	</td>
+	</tr>
+	<tr> 
+	<td>
+	SECURITY ANSWER<td><input type="text" name="answer" maxlength="40"/>
+		<br>	</td> 
+		
+</tr>
+</table>
+		<br><br><center>
+	<input type="submit" value="Submit Your Request"/>
+		<input type="reset" onclick="myfunction()"value="Reset The Form"/><br/></center>
+	</Form>
+	</div>
+	</BODY>
+	</HTML>
+	

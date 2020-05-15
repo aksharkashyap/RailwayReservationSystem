@@ -1,0 +1,132 @@
+<!DOCTYPE html >
+<html>
+	<head>
+	
+	
+	
+<style>
+body {
+        background-image: url("ok.png");
+} 
+.auto-style1 {
+	color: #E3DBDB;
+}
+.auto-style2 {
+	font-weight: bold;
+	color: #E3DBDB;
+}
+</style>
+
+	
+	<title>Feedback Form</title>
+	<script src="feedbackformvalidation.js"></script>
+	<script>
+	required.add('Name','NOT_EMPTY','Name');
+	required.add('Email','EMAIL','Email');
+	required.add('Subject','NOT_EMPTY','Subject');
+	required.add('Message','NOT_EMPTY','Message');
+	required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
+	
+	function checkMessageCount() {
+		var maxlen = 1000;
+		var len = document.getElementById('Message').value.length;
+		document.getElementById('charsleft').innerHTML = 'You have ' + (maxlen - len) + ' characters remaining';
+	}
+
+	</script>
+	<link rel="stylesheet" type="text/css" href="feedbackform.css">
+	<form method="post">
+<input type="button" value="Go To HOME" onclick="window.location.href='homepage afterlogin.html'" />
+</form>
+
+	</head>
+	<body>
+<div class="feedback"><div class="feedback-default">
+<form accept-charset="utf-8" name="feedbackform" method="post" action="thankyou.htm" onsubmit="return validate.check(this)">
+<table border="0" align="center">
+<tr>
+ <td colspan="2">
+  <h2>Reservation System Feedback/Query Form</h2>
+  <p class="feedback_comments">An asterisk (<span class="required_star"> * </span>) indicates a mandatory field.</p><br />
+ </td>
+</tr>
+<tr>
+ <td valign="top" style="width: 112px">
+  <label for="Name">Name<span class="required_star"> * </span></label>
+ </td>
+ <td valign="top">
+  <input class="feedback_text" type="text" name="Name" id="Name" maxlength="100" />
+ </td>
+</tr>
+<tr>
+ <td valign="top" style="width: 112px">
+  <label for="Email">Email<span class="required_star"> * </span></label>
+ </td>
+ <td valign="top">
+  <input class="feedback_textbig" type="text" name="Email" id="Email" maxlength="100" />
+ </td>
+</tr>
+<tr>
+ <td valign="top" style="width: 112px">
+  <label for="Telephone">Telepho</label></td>
+ <td valign="top">
+  <input class="feedback_text" type="text" name="Telephone" id="Telephone" maxlength="20" />
+ </td>
+</tr>
+<tr>
+ <td valign="top" style="width: 112px">
+  <label for="Webpage">Webpage address</label>
+ </td>
+ <td valign="top">
+  <input class="feedback_textbig" type="text" name="Webpage" id="Webpage" maxlength="100" />
+ </td>
+</tr>
+<tr>
+ <td valign="top" style="width: 112px">
+  <label for="Subject">Subject<span class="required_star">* </span></label>
+ </td>
+ <td valign="top">
+  <input class="feedback_text" type="text" name="Subject" value="General Feedback" id="Subject" maxlength="50" />s</td>
+</tr>
+<tr>
+ <td valign="top" style="width: 112px">
+  <label for="Message"><br><br>Message<span class="required_star">* </span></label>
+ </td>
+ <td valign="top">
+  <textarea class="feedback_textarea" name="Message" id="Message" maxlength="1000" onKeyUp="checkMessageCount()" /></textarea>
+  <br />
+  <div id="charsleft" class="feedback_comments"><br>You have 1000 characters remaining</div>
+ </td>
+</tr>
+<tr>
+ <td colspan="2" style="text-align:center" >
+  <div class="antispammessage">
+  	<span class="auto-style1">To help prevent automated spam, please answer this question
+  	</span>
+  <br /><br />
+	  <div class="antispamquestion">
+	   <span class="auto-style2"> * </span>
+	      <span class="auto-style1">Using only numbers, what is 8 plus 2?</span> &nbsp; 
+	   <input type="text" name="AntiSpam" id="AntiSpam" maxlength="100" style="width:30px">
+	  </div>
+  </div>
+ </td>
+</tr>
+<tr>
+ <td colspan="2">
+  <br /><br />
+  <input type="text" id="url" name="url" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <input type="submit"  value="Submit Feedback" id="form_submit_button" class="feedback_button" />
+
+  <br /><br />
+   <br /><br />
+ </td>
+</tr>
+</table>
+</form>
+</div></div>
+
+
+</body>
+</html>

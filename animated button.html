@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<img src="cooltext5.png" width="1351" height="108" alt="ONLINE RESERVATION PORTAL" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 40px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+body {
+        background-image: url("ok.png");
+} 
+
+.Container input{ /* You Can Name it what you want*/
+margin-right:16px;
+}
+.Container input:last-child{
+margin-right:0px;
+/*so the last one dont push the div thas giving the space only between the inputs*/
+}
+
+.button2 {
+  border-radius: 4px;
+  background-color:#0F9490;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 20px;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.auto-style1 {
+	color: #F8E7E7;
+}
+
+
+</style>
+</head>
+<body>
+<div class="Container ">
+<form method="post">
+	<input name="Button1" type="button" value="Home">
+	<input name="Button2" type="button" value="Logout">
+	<input name="Button3" type="button" value="Password Reset">
+	<input name="Button4" type="button" value="Give Us Feedback">
+	<input name="Button5" type="button" value="About US"></form>
+</div>
+<h2>SERVICES</h2>
+
+<button class="button"><span>Book Your Tickets </span></button>
+<button class="button"><span>Print Your Tickets </span></button>
+<button class="button"><span>Cancell Booked Tickets </span></button>
+<button class="button"><span>Booked Ticket History </span></button>
+<button class="button"><span>Live Train Status</span></button>
+<button class="button"><span>Book Your Tickets </span></button>
+<button class="button"><span>Save Passanger List </span></button>
+<button class="button"><span>Profile Update </span></button>
+<button class="button2"><span>LogOut </span></button>
+
+<br><br><br><br><br><br>
+<marquee class="auto-style1"><em>WELCOME TO ONLINE RAILWAY RESERVATION SYSTEM</em></marquee>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<title>Indian Railways Billing-</title>
+<head>
+
+
+<style>
+body {
+        background-image: url("dark2.jpg");
+} 
+
+.div {width: 300;
+     border: 10px solid gray;
+	 border-top: double;
+	 border-bottom: double;
+     padding: 55px;
+     margin: 00px;
+	 border-radius: 50px;30px;30px;
+	
+}
+
+
+tag {
+	display: inline-block;
+	margin-left: 760px;
+}
+
+	input[type=radio]:checked+span{color: red;}
+
+	input[type=radio] + span:before
+	
+	{content: "";
+	display: inline-block;
+	width: 25px;
+	height: 20px;
+	margin-bottom: -3px;
+	margin-right: 5px;
+	border:2px solid black;
+	background: url(img/train.png)no-repeat center bottom;
+	background-size: 30px 30px;
+	}
+	
+</style>
+<script type= "text/javascript">
+
+
+
+function check_reset()
+{
+alert("Your Selection Will Be Reset");
+
+}
+
+
+function validate() 
+{
+var radio1= document.getElementById('Pay1').checked;
+var radio2= document.getElementById('Pay2').checked;
+var radio3= document.getElementById('Pay3').checked;
+var radio4= document.getElementById('Pay4').checked;
+var radio5= document.getElementById('Pay5').checked;
+var radio6= document.getElementById('Pay6').checked;
+var radio7= document.getElementById('Pay7').checked;
+var radio8= document.getElementById('Pay8').checked;
+var radio9= document.getElementById('Pay9').checked;
+var radio10= document.getElementById('Pay10').checked;
+if (radio1 =="" && radio2 =="" && radio3 =="" &&radio4 =="" &&radio5 =="" &&radio6 =="" 
+	&&radio7 =="" &&radio8 =="" &&radio9 =="" &&radio10 =="" )
+{
+alert("Please Select The Payment Method");
+return false;
+}
+else 
+
+{
+var txt;
+	var r = confirm("Are You Sure to Submit!");
+	if (r == true) 
+	{ 
+	window.location="payment.html";
+	} 
+	else 
+	{
+    alert("Cancelled !");
+	}
+}
+
+}
+
+
+
+
+
+
+</script>
+</head>
+<body>
+<IMG STYLE="position:absolute; TOP:5px; LEFT:00px; WIDTH:1600px; HEIGHT:80px" SRC="cooltext6.png"><br><br><br><br><br>
+<IMG STYLE="position:absolute; LEFT:05px; TOP: 110px; WIDTH:600px; HEIGHT:300px" SRC="indian.jpg">
+<IMG STYLE="position:absolute; LEFT:05px; TOP: 420px; WIDTH:600px; HEIGHT:370px" SRC="pay2.jpg">
+<IMG STYLE="position:absolute; TOP:110px; LEFT:1300px; WIDTH:300px; HEIGHT:200px" SRC="debit.jpg">
+<IMG STYLE="position:absolute; TOP:310px; LEFT:1300px; WIDTH:300px; HEIGHT:200px" SRC="payu.jpg">
+<IMG STYLE="position:absolute; TOP:510px; LEFT:1300px; WIDTH:300px; HEIGHT:200px" SRC="mvisa.jpg">
+<IMG STYLE="position:absolute; TOP:710px; LEFT:1300px; WIDTH:300px; HEIGHT:100px" SRC="irctc4.jpg">
+<h2><center>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<mark>Choose Your Payment Method</mark></center></h2>
+<tag><hr> <p>Total Fare: 	</p> <hr /></br>
+
+<div class= "div">
+<form><h2>
+
+
+<label><input type="radio" name="Pay" id="Pay1"/><span> UPI</span></label>
+	
+<label><input type="radio" name="Pay" id="Pay2"/><span> mVISA</span></label><br>
+		
+<h2>2.WALLETS</h2>
+
+
+	<h3>
+	<label><input type="radio" name="Pay" id="Pay3"/><span> JioMoney</span></label>
+	<label><br><input type="radio" name="Pay" id="Pay4"/><span> PayTM</span></label>
+	<label><br><input type="radio" name="Pay" id="Pay5"/><span> PhonePay</span></label>
+	<label><br><input type="radio" name="Pay" id="Pay6"/><span> mobiKwik</span></label><br>
+	<label><input type="radio" name="Pay" id="Pay7"/><span> Tez App</span></label><br>
+	
+
+
+<h2>3.Other Payment Options<h2>
+    
+	 <tr><td>
+	 <label><input type="radio" name="Pay" id="Pay8" value="Credit_Card"/><span> Credit Card</span></label><br>
+	 <label><input type="radio" name="Pay" id="Pay9"value="Debit_Card"/><span> Debit Card</span>	</label><br>
+	 <label><input type="radio" name="Pay" id="Pay10" value="Internet Banking " /><span> InternetBanking</span>	</label><br>
+	 </td>
+	 </tr>
+	 
+	 </div>
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 <input type="reset" name="reset" value="Reset" onclick="check_reset()" />
+	 <input type="button" value="Click To Pay" onclick="validate()" />
+
+</form>
+
+
+
+
+
+</tag>
+</body>
+</html>

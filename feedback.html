@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+
+<img src="raill.jpg" width="1340" height="70" alt="ONLINE RESERVATION PORTAL" />
+
+
+<form method="post">
+<input type="button" value="Go To Home Page" onclick="window.location.href='homepage afterlogin.html'" />
+</form>
+
+<form method="post">
+	&nbsp;
+</form>
+<title>Feedback form</title>
+
+<style type="text/css">
+
+
+body {
+        background-image: url("ok2.jpg");
+} 
+div {width: 200;
+     border: 20px solid silver;
+	 border-radius: 10% 30% 50% 70%;
+     padding: 10px;
+     margin-left: 260px;
+     margin-right:250px;
+     color:black;
+	 
+  
+	border-top-width:8px;
+	border-bottom-width:8px;
+
+     background-image:url('dj.jpeg')
+}
+
+
+
+</style>
+
+<HEAD>
+
+	
+	
+	<SCRIPT type="text/javascript">
+	
+function validateUrPw(thisform) 
+
+{
+    var username= thisform.uname.value;
+    var num= thisform.num.value;
+	var mess=thisform.message.value;
+	var subject=thisform.sub.value;
+    var txtEmail= thisform.email.value;
+    var illegalchars=  /[\(\)\<\>\,\;\:\\\/\"\[\]]/;
+    var n1=txtEmail.indexOf("@");
+    var n2=txtEmail.lastIndexOf(".");
+	var antispam=thisform.spam.value;
+    
+if (username=="") 
+	{
+        alert("Enter Your Name");
+        thisform.uname.focus();
+        return false;
+    }
+	
+	
+if (txtEmail=="")
+{
+alert("Enter the email address");
+thisform.email.focus();
+return false;
+}
+
+if(txtEmail.match(illegalchars))
+{
+alert("Invalid Email address");
+thisform.email.focus();
+return false;
+}
+
+if (n1<1 || n2 - n1<2)
+{
+alert("Invalid Email address");
+thisform.email.focus();
+return false;
+}
+ 
+ 
+ if (num==null|| num=="")
+    {
+    alert("Enter Mobile Number");
+    thisform.num.focus();
+    return false;
+    }
+    if (num.length>10 || num.length<10)
+    {
+    
+    alert("Mobile Number Should be of 10 digit only");
+    thisform.num.focus();
+    return false;
+
+    }
+    if (isNaN(num))
+    {
+    alert("Enter the Correct Mobile Number");
+    thisform.num.focus();
+    return false;
+	}
+     
+ if (subject=="")
+    {
+    alert("Enter The Subject");
+    thisform.sub.focus();
+    return false;
+    }
+	 
+	 if (mess=="")
+    {
+    alert("Enter Your Message");
+    thisform.message.focus();
+    return false;
+    }
+	 if (antispam =="")
+	 {
+    alert("Answer the Question");
+    thisform.spam.focus();
+    return false;
+    }
+	if (isNaN(antispam))
+    {
+    alert("Invalid Answer.Try Again");
+    thisform.num.focus();
+    return false;
+	}
+
+	 if (antispam !=="10")
+	 {
+    alert("Wrong Answer");
+    thisform.spam.focus();
+    return false;
+    }
+	
+ return true;
+  
+ }
+function myfunction()
+{
+
+alert("Form Has Been Reset");
+
+}
+
+</SCRIPT>
+
+
+<link rel="stylesheet" type="text/css" href="feedbackform.css">
+
+
+
+	</HEAD>
+	<BODY>
+	
+	<td colspan="2">
+ <center><h2>
+ Reservation System Feedback/Query Form</h2>
+ 
+  <p class="feedback_comments">An asterisk (<span class="required_star"> * </span>) indicates a mandatory field.</p><br /></center>
+ </td>
+</tr>
+	<div class="feedback">
+	<tr>
+  
+	 <Form action="password_recovery after.html" onsubmit="return validateUrPw(this)" method="Post">
+	 <table align="center" cellpadding = "10">
+	
+					
+	<!----- Email Id ---------------------------------------------------------->
+	<tr>
+	 <td valign="top">Name<span class="required_star"> * </span>
+	 </td>
+	<td><input type="text" name="uname"/></td>
+	</tr>
+		<tr>
+
+		 <td valign="top">Email <span class="required_star"> * </span>
+	 </td>
+	<td><input type="text" name="email"/></td>
+	</tr>
+
+	<tr>
+
+		 <td valign="top">Telephone<span class="required_star">* </span>
+	 </td>
+	<td><input type="number" name="num"/></td>
+	</tr>
+	
+	<tr>
+
+		 <td valign="top">Subject<span class="required_star">* </span>
+	 </td>
+	<td><input type="text" name="sub"/></td>
+	</tr>
+	
+	<tr>
+		 <td valign="top">Message<span class="required_star">* </span>
+	 </td>
+	<td><textarea name="message" rows="6" cols="30" maxlength="1000"></textarea>(max 1000 characters)</td>
+	</tr>
+	
+</table>
+<center>
+<tr>
+ <td colspan="2" style="text-align:center" >
+  
+  	To help prevent automated spam, please answer this question
+  	
+	<br /><br />
+	  
+	   <span class="required_star"> * </span>
+	      <span class="check">Using only numbers, what is 8 plus 2?</span> &nbsp; 
+	   <input type="text" name="spam"  maxlength="100" style="width:30px">
+  
+ </td>
+</tr>
+
+</center>
+
+
+
+		<br><br><center>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" value="Submit"/>
+		<input type="reset" onclick="myfunction()"value="Reset The Form"/><br/></center>
+	</Form>
+	</div>
+	</BODY>
+	</HTML>
+	
